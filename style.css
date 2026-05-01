@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="app-container">
+  <nav>
+    <button onclick="showSection('media')">Media</button>
+    <button onclick="showSection('community')">Community</button>
+    <button onclick="showSection('pomodoro')">Pomodoro</button>
+    <button onclick="showSection('ripasso')">Ripasso</button>
+  </nav>
+
+  <section id="media" class="active">
+    <h2>📊 Calcola Media</h2>
+    <input type="text" id="votiInput" placeholder="Inserisci voti (es. 6, 7.5, 8)">
+    <button class="main-btn" onclick="calcolaMedia()">Calcola</button>
+    <p class="res">Media: <span id="valoreMedia">--</span></p>
+  </section>
+
+  <section id="pomodoro">
+    <h2>🍅 Timer Pomodoro</h2>
+    <div class="timer-display" id="timer">25:00</div>
+    <div class="controls">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </section>
+
+  <section id="ripasso">
+    <h2>📚 Divisione Ripasso</h2>
+    <input type="text" id="materia" placeholder="Materia">
+    <input type="number" id="pagine" placeholder="Totale pagine">
+    <input type="number" id="giorni" placeholder="Giorni disponibili">
+    <button class="main-btn" onclick="dividiRipasso()">Pianifica</button>
+    <p class="res" id="pianoRisultato"></p>
+  </section>
+</div>
+<section id="community">
+  <h2>📂 Bacheca Riassunti</h2>
+  <div class="upload-box">
+    <input type="text" id="titoloRiassunto" placeholder="Titolo (es. Storia - I Romani)">
+    <input type="text" id="linkRiassunto" placeholder="Incolla link (Google Drive o Dropbox)">
+    <button class="main-btn" onclick="caricaRiassunto()">Condividi</button>
+  </div>
+  
+  <div id="listaRiassunti" class="riassunti-grid">
+    </div>
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
